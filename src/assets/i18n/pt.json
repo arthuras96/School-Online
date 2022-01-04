@@ -1,0 +1,97 @@
+{
+    "GENERAL": {
+      "ERROR": "Erro interno",
+      "SAVE":"Salvar",
+      "YES": "Sim",
+      "NO": "Não",
+      "UNAUTHORIZED": "Usuário não autorizado para esta ação",
+      "FILTER": "Filtrar",
+      "CANCELEDOPERATION": "Operação cancelada",
+      "CLOSE": "Fechar",
+      "TITLE": "Titulo",
+      "ACTIONS": "Ações"
+    },
+    "LOGIN": {
+      "TITLE": "Painel",
+      "USERNAME": "Nome de usuário ou e-mail",
+      "PASSWORD": "Senha",
+      "LOGIN": "Entrar",
+      "WELCOME": "Bem vindo(a) ",
+      "FAIL": "Houve uma falha na sua solicitação. Tente novamente, e contate a TI em caso de persistencia.",
+      "ERRORUSER": "Usuário e/ou senha invalidos."
+    },
+    "HEADER": {
+      "TITLE": "SOL",
+      "MENU": {
+        "HOME": "Início",
+        "OUT": "Sair",
+        "TEST": "Teste",
+        "BROKER": "Corretor"
+      },
+      "LASTACCESS": "Último acesso"
+    },
+    "NOTFOUND": {
+      "TITLE": "PÁGINA NÃO ENCONTRADA",
+      "MESSAGE": "LAMENTAMOS, MAS A PÁGINA QUE VOCÊ SOLICITOU NÃO FOI ENCONTRADA"
+    },
+    "TESTBROKER": {
+      "STATISTIC": "Estatística",
+      "AVERAGEGRADE": "Nota média",
+      "FULLMARK": "Nota máxima",
+      "MINIMUMGRADE": "Nota mínima",
+      "MODE": "Moda",
+      "CLASS": "Turma",
+      "DISCIPLINE": "Disciplina",
+      "RATEDCOUNT": "Corrigidas",
+      "LASTEVALUATION": "Última avaliação alcançada",
+      "SAVESUCCESS": "Avaliação salva com sucesso",
+      "SAVEERROR": "Falha ao salvar avaliação"
+    },
+    "DISCIPLINE": {
+      "1": "Artes",
+      "2": "Biologia",
+      "3": "Química",
+      "4": "Informática",
+      "5": "Domínios Ciências das Humanas",
+      "6": "Inglês",
+      "7": "Educação Financeira",
+      "8": "Geografia",
+      "9": "Geopolítica",
+      "10": "História",
+      "11": "Direito e Cidadania",
+      "12": "Literatura",
+      "13": "Matemática",
+      "14": "Música",
+      "15": "Domínios Ciências da Natureza",
+      "16": "Natureza e Cultura",
+      "17": "Filosofia",
+      "18": "Educação Física",
+      "19": "Física",
+      "20": "Português",
+      "21": "Redação",
+      "22": "Robótica",
+      "23": "Ciência",
+      "24": "Sociologia",
+      "25": "Espanhol"
+    },
+    "EDUCATIONLEVEL": {
+      "1": "Ensino Fundamental I",
+      "2": "Ensino Fundamental II",
+      "3": "Ensino Médio",
+      "4": "Curso"
+    },
+    "EVALUATIONCATEGORY": {
+      "1": "Simulado",
+      "2": "Avaliação Padrão"
+    },
+    "QUESTIONTYPE": {
+      "1": "Dissertativa",
+      "2": "Alternativa",
+      "3": "Multipla Alternativa"
+    },
+    "QUESTIONDESCRIPTIONTYPE": {
+      "1": "Imagem",
+      "2": "Texto",
+      "3": "Formula Matemática"
+    }
+}

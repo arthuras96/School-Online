@@ -1,0 +1,38 @@
+.login-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login-form-1{
+    width: 370px;
+    padding: 5%;
+    box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.3), 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+    background: #333;
+}
+
+.login-form-1 h3{
+    text-align: center;
+    color: #999;
+}
+
+.title-logo {
+    width: 190px;
+    height: auto;
+}
+
+.full-width-center{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.force-white-font {
+    color: #FFFFFF !important;
+}
+
+.pointer {
+    cursor: pointer;
+}

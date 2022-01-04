@@ -1,0 +1,87 @@
+<div *ngIf="evaluations.length > 0" class="container-test-broker">
+    <div class="title-test-broker">
+        <span>{{evaluation.dsevaluation}}</span>
+        <span>
+            <button (click)="openEditFrame()" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </span>
+        <span>
+            <button (click)="backEvaluation()" [disabled]="selectEvaluationStudent === 0" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            &nbsp;
+            <button (click)="forwardEvaluation()" [disabled]="selectEvaluationStudent === evaluations.length - 1" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </span>
+
+        <span *ngIf="evaluations !== null">{{selectEvaluationStudent + 1}}/{{evaluations.length}}</span>
+
+    </div>
+    <div class="body-test-broker">
+
+        <div *ngIf="evaluations[selectEvaluationStudent].evaluations.length > 0" class="image-list-test-broker">
+            <img (click)="changePage(indexListImage)" *ngFor="let evaluation of evaluations[selectEvaluationStudent].evaluations; index as indexListImage" class="listed-image-test-broker" src="{{evaluation.image}}">
+        </div>
+
+        <div *ngIf="evaluations[selectEvaluationStudent].evaluations.length > 0" class="body-image-test-broker">
+            <img class="body-image-selected-test-broker" src="{{evaluations[selectEvaluationStudent].evaluations[actualPage].image}}">
+        </div>
+
+        <div class="questions-test-broker">
+            <mat-card class="card-test-broker">
+                <mat-card-header>
+                    <mat-card-title>{{ 'TESTBROKER.STATISTIC' | translate }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ 'TESTBROKER.AVERAGEGRADE' | translate }}: 0</p>
+                    <p>{{ 'TESTBROKER.FULLMARK' | translate }}: 0</p>
+                    <p>{{ 'TESTBROKER.MINIMUMGRADE' | translate }}: 0</p>
+                    <p>{{ 'TESTBROKER.MODE' | translate }}: 0</p>
+                </mat-card-content>
+            </mat-card>
+            <br />
+            <mat-card class="card-test-broker">
+                <mat-card-header>
+                  <div mat-card-avatar style="background-image: url({{evaluations[selectEvaluationStudent].studentphoto}}); background-size: cover;"></div>
+                  <mat-card-title>{{evaluations[selectEvaluationStudent].namestudent}}</mat-card-title>
+                  <mat-card-subtitle>EM1A</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+
+                    <form (ngSubmit)="saveGrades()" [formGroup]="evaluationGradeForm">
+                        <div formArrayName="grades"
+                          *ngFor="let item of evaluationGradeFormGroups['controls']; let i = index;"
+                        >
+                        
+                          <div [formGroupName]="i">
+                            {{ evaluations[selectEvaluationStudent].questions[i].sequence }}. {{ evaluations[selectEvaluationStudent].questions[i].dsquestion }}
+                            <!-- Marque as alternativas corretas: -->
+                            <br />
+                            <mat-form-field class="full-width" appearance="fill">
+                                <mat-label>Nota</mat-label>
+                                <input matInput formControlName="grade" placeholder="Item name">
+                            </mat-form-field>  
+                            
+                          </div>
+                          <!-- Exposed item name: {{ evaluationGradeForm.controls.grades.controls[i].controls.name.value }} -->
+                        </div>
+                        <!-- <button type="button" (click)="testing()">Add Item</button> -->
+
+                        <mat-divider inset></mat-divider>
+                        <mat-card-actions>
+                            <mat-checkbox style="margin-left: 8px; margin-bottom: 10px;" [(ngModel)]="evaluations[selectEvaluationStudent].sendemail" [ngModelOptions]="{standalone: true}">Enviar e-mail</mat-checkbox>
+                            <br />
+                            <button type="submit" [disabled]="evaluationGradeForm.invalid" mat-raised-button color="primary">{{ 'GENERAL.SAVE' | translate }}</button>
+                        </mat-card-actions>
+                    </form>
+                    <!-- {{ evaluationGradeForm.value | json }} - {{ evaluationGradeForm.valid }} -->
+                    <br />                   
+                </mat-card-content>
+              </mat-card>
+        </div>
+
+    </div>
+</div>

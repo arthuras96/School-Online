@@ -1,0 +1,43 @@
+.presence-create-update {
+  margin: 10px;
+}
+
+.title-presence {
+  display: flex;
+  justify-content: space-between
+}
+
+.form-presence-create-update {
+  margin-top: 10px;
+}
+
+.mat-card-title-group {
+  display: inline-flex !important;
+}
+
+.classroom-list {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.classroom-card {
+  width: max-content;
+  margin: 10px;
+  text-align: center;
+  min-width: 235px;
+}
+
+.card-title-margin-bottom {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: large;
+  text-align: center;
+}
+
+.card-options {
+  top: 0;
+  right: 0;
+  position: absolute;
+}

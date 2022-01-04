@@ -1,0 +1,50 @@
+<div class="container-evaluation-list">
+    <div class="example-header" fxLayout="row">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event)" placeholder="{{ 'GENERAL.FILTER' | translate }}">
+        </mat-form-field>
+      </div>
+      
+      <div class="example-container mat-elevation-z8">
+      
+        <mat-table [dataSource]="dataSource" matSort>
+      
+          <!-- Title Column -->
+          <ng-container matColumnDef="evaluation">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'GENERAL.TITLE' | translate }} </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="evaluation"> {{row.dsevaluation}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="count">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'TESTBROKER.RATEDCOUNT' | translate }} </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="count"> {{row.ratedcount}}/{{row.totalcount}} </mat-cell>
+          </ng-container>
+      
+          <!-- Module Column -->
+          <ng-container matColumnDef="discipline">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'TESTBROKER.DISCIPLINE' | translate }} </mat-header-cell>
+            <mat-cell *matCellDef="let row" data-label="discipline">
+                {{row.disciplines.toString()}}
+            </mat-cell>
+          </ng-container>
+      
+          <!-- Play Column -->
+          <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef> {{ 'GENERAL.ACTIONS' | translate }} </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <button (click)="openBroker(row)" mat-icon-button>
+                <mat-icon>launch</mat-icon>
+              </button>
+            </mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;">
+          </mat-row>
+        </mat-table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      </div>
+      
+      
+</div>

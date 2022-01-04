@@ -1,0 +1,24 @@
+<div class="login-container d-flex justify-content-center align-items-center">
+        <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 login-form-1">
+                        <div class="full-width-center"><img src="assets/images/sol-logo.png" class="title-logo"></div>
+                        <h3><b>{{ 'LOGIN.TITLE' | translate }}</b> | Login</h3>
+                        <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate class="force-white-font">
+
+                                <mat-form-field class="full-width force-white-font">
+                                        <input matInput placeholder="{{'LOGIN.USERNAME' | translate}}" formControlName="username" class="force-white-font">
+                                </mat-form-field>
+
+                                <mat-form-field class="full-width">
+                                        <input matInput placeholder="{{'LOGIN.PASSWORD' | translate}}" formControlName="password" [type]="hide ? 'password' : 'text'" class="force-white-font">
+                                        <mat-icon class="pointer" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </mat-form-field>
+
+                                <div class="form-group">
+                                        <button class="btnSubmit" type="submit" [disabled]="loginForm.invalid" mat-raised-button color="primary" class="full-width">{{ 'LOGIN.LOGIN' | translate }}</button>
+                                </div>
+                                
+                        </form>
+                </div>
+        </div>
+</div>

@@ -1,0 +1,60 @@
+.listed-image-test-broker {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.listed-image-test-broker:hover {
+    opacity: 0.5;
+}
+
+.container-test-broker {
+    margin: 10px 10px 25px 10px;
+    overflow: hidden;
+}
+
+.title-test-broker {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.body-test-broker {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-list-test-broker {
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    overflow: auto;
+}
+
+.body-image-test-broker {
+    width: 58%;
+    padding: 0px 10px 0px 10px;
+    overflow: auto;
+}
+
+.body-image-selected-test-broker {
+    width: 100%;
+}
+
+.questions-test-broker {
+    width: 25%;
+    overflow: auto;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.card-test-broker {
+    width: 85%;
+}
+
+.form-field-test-broker {
+    width: 90%;
+}

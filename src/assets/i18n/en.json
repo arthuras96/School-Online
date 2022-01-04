@@ -1,0 +1,97 @@
+{
+    "GENERAL": {
+      "ERROR": "Internal error",
+      "SAVE":"Save",
+      "YES": "Yes",
+      "NO": "No",
+      "UNAUTHORIZED": "User not authorized for this action",
+      "FILTER": "Filter",
+      "CANCELEDOPERATION": "Operation canceled",
+      "CLOSE": "Close",
+      "TITLE": "Title",
+      "ACTIONS": "Actions"
+    },
+    "LOGIN": {
+      "TITLE": "Panel",
+      "USERNAME": "Username or e-mail",
+      "PASSWORD": "Password",
+      "LOGIN": "Log in",
+      "WELCOME": "Welcome ",
+      "FAIL": "Your request failed. Try again, and contact TI in case of persistence.",
+      "ERRORUSER": "Username and/or password is invalid."
+    },
+    "HEADER": {
+      "TITLE": "SOL",
+      "MENU": {
+        "HOME": "Home",
+        "OUT": "Logout",
+        "TEST": "Test",
+        "BROKER": "Broker"
+      },
+      "LASTACCESS": "Last access"
+    },
+    "NOTFOUND": {
+      "TITLE": "OOPS! PAGE NOT FOUND",
+      "MESSAGE": "WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND"
+    },
+    "TESTBROKER": {
+      "STATISTIC": "Statistic",
+      "AVERAGEGRADE": "Average grade",
+      "FULLMARK": "Full Mark",
+      "MINIMUMGRADE": "Minimum grade",
+      "MODE": "Mode",
+      "CLASS": "Class",
+      "DISCIPLINE": "Discipline",
+      "RATEDCOUNT": "Rated",
+      "LASTEVALUATION": "Last evaluation achieved",
+      "SAVESUCCESS": "Evaluation saved successfully",
+      "SAVEERROR": "Failed to save evaluation"
+    },
+    "DISCIPLINE": {
+      "1": "Arts",
+      "2": "Biology",
+      "3": "Chemistry",
+      "4": "Computing",
+      "5": "Domains Human Sciences",
+      "6": "English",
+      "7": "Financial Education",
+      "8": "Geography",
+      "9": "Geopolitics",
+      "10": "History",
+      "11": "Law and Citizenship",
+      "12": "Literature",
+      "13": "Math",
+      "14": "Music",
+      "15": "Natural Science Domains",
+      "16": "Nature and Culture",
+      "17": "Philosophy",
+      "18": "Physical Education",
+      "19": "Physics",
+      "20": "Portuguese",
+      "21": "Redaction",
+      "22": "Robotics",
+      "23": "Science",
+      "24": "Sociology",
+      "25": "Spanish"
+    },
+    "EDUCATIONLEVEL": {
+      "1": "Elementary School I",
+      "2": "Elementary School II",
+      "3": "High School",
+      "4": "Course"
+    },
+    "EVALUATIONCATEGORY": {
+      "1": "Simulated",
+      "2": "Standard Evaluation"
+    },
+    "QUESTIONTYPE": {
+      "1": "Essay",
+      "2": "Alternative",
+      "3": "Multiple Alternative"
+    },
+    "QUESTIONDESCRIPTIONTYPE": {
+      "1": "Image",
+      "2": "Text",
+      "3": "Mathematical formula"
+    }
+}
