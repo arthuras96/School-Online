@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { LoginService } from 'src/app/security/login/login.service';
 import { EvaluationService } from '../evaluation.service';
 import { EvaluationModel } from '../models/evaluation.model';
 
@@ -15,10 +16,11 @@ import { EvaluationModel } from '../models/evaluation.model';
 export class EvaluationListComponent implements OnInit, OnDestroy {
 
   evaluations: EvaluationModel[] = [];
-
   displayedColumns: string[] = ['evaluation', 'discipline', 'count', 'actions'];
-
   dataSource: MatTableDataSource<EvaluationModel> = new MatTableDataSource([...this.evaluations]);
+
+  permissions: number[] = [];
+  showAddBtn: boolean = false;
 
   @ViewChild(MatSort, { static: true })
   sort: MatSort = new MatSort;
@@ -26,7 +28,8 @@ export class EvaluationListComponent implements OnInit, OnDestroy {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   
-  constructor(private router: Router,
+  constructor(private loginService: LoginService,
+              private router: Router,
               private evaluationService: EvaluationService,
               public translate: TranslateService) {
                 
@@ -36,12 +39,11 @@ export class EvaluationListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // this.evaluations.push(
-    //   {idevaluation: 1, dsevaluation: "Test Evaluation 1", groups: "EM1A, EM1B", disciplines: ["Matemática, Português"], disciplinesid: []}
-    // );
-    // this.evaluations.push(
-    //   {idevaluation: 2, dsevaluation: "Test Evaluation 2", groups: "EF1A, EF1B", disciplines: ["Artes"], disciplinesid: []}
-    // );
+    let tempUser = this.loginService.getUser();
+    this.permissions = JSON.parse(tempUser.permissions.toString());
+
+    if(this.permissions.findIndex(permission => permission === 2) !== -1)
+      this.showAddBtn = true;
 
     this.evaluationService.GetListEvaluations().subscribe(
       evaluations => {
@@ -78,6 +80,10 @@ export class EvaluationListComponent implements OnInit, OnDestroy {
   } 
 
   openBroker(row: EvaluationModel){
-    this.router.navigate(['/evaluation-broker/' + row.idevaluation], {state: {data: {evaluation: row}}});
+    this.router.navigate(['/evaluation-broker'], {state: {data: {evaluation: row}}});
+  }
+
+  addEvaluation(){
+    this.router.navigate(['/evaluation-record']);
   }
 }

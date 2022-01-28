@@ -2,3 +2,13 @@
     margin: 10px 10px 25px 10px;
     overflow: hidden;
 }
+
+.add-evaluation-btn-div {
+    position:relative;
+}
+
+.add-evaluation-btn {
+    position:absolute;
+    bottom: 30px;
+    right: 15px;
+}

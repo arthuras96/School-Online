@@ -12,8 +12,8 @@ import { EvaluationListComponent } from './evaluation/evaluation-list/evaluation
 export const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: HomeComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard]},
-  {path: 'evaluation-broker/:id', component: TestBrokerComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard], data: {permission: 1}},
-  {path: 'evaluation-broker', component: EvaluationListComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard], data: {permission: 1}},
+  {path: 'evaluation-broker', component: TestBrokerComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard], data: {permission: 1}},
+  {path: 'evaluation', component: EvaluationListComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard], data: {permission: 1}},
   {path: 'evaluation-record', component: EvaluationRecordComponent, canLoad: [LoggedInGuard], canActivate: [LoggedInGuard], data: {permission: 2}},
   {path: '**', redirectTo: '/404'},
   {path: '404', component: NotFoundComponent}

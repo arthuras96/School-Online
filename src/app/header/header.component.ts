@@ -151,7 +151,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
           this.menuItems.splice(1, 0, {
             label: text,
             icon: 'admin_panel_settings',
-            action: '/evaluation-broker',
+            action: '/evaluation',
             showOnMobile: false,
             showOnTablet: false,
             showOnDesktop: true

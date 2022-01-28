@@ -45,6 +45,8 @@
       
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
       </div>
-      
-      
 </div>
+
+<button *ngIf="showAddBtn" mat-fab color="primary" class="add-evaluation-btn" (click)="addEvaluation()">
+  <mat-icon>add</mat-icon>
+</button>
